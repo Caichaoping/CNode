@@ -69,19 +69,20 @@
     <!-- App Widget -->
     <style name="AppWidget" parent="Theme.AppCompat.Light" />
 
-    <!-- Deep Line -->
+    <!-- 横向分割线 -->
     <style name="AppWidget.DeepLine">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
         <item name="android:background">?android:attr/listDivider</item>
     </style>
 
+    <!-- 竖向分割线 -->
     <style name="AppWidget.DeepLine.Vertical">
         <item name="android:layout_width">1dp</item>
         <item name="android:layout_height">match_parent</item>
     </style>
 
-    <!-- Gap -->
+    <!-- Gap 左侧菜单间的间隙 -->
     <style name="AppWidget.ItemGap">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">8dp</item>
@@ -100,7 +101,7 @@
         <item name="android:background">@drawable/gap_shadow_opposite</item>
     </style>
 
-    <!-- Navigation -->
+    <!-- Navigation 左侧菜单 -->
     <style name="AppWidget.NavigationItem">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48dp</item>
@@ -130,7 +131,7 @@
         <item name="android:layout_marginBottom">8dp</item>
     </style>
 
-    <!-- Button -->
+    <!-- 按钮 -->
     <style name="AppWidget.Button">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">16sp</item>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cc.cnode.ui.widget.ScrimInsetsScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="?attr/widgetBackground"
+    android:scrollbars="none"
+    app:appInsetForeground="#44000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_primary">
+
+            <ImageView
+                android:id="@+id/main_nav_img_top_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/main_nav_layout_info"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/main_nav_header_bg"/>
+
+            <View
+                android:id="@+id/main_nav_adapt_status_bar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+            <LinearLayout
+                android:id="@+id/main_nav_layout_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_nav_adapt_status_bar"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/main_nav_img_avatar"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/image_placeholder"/>
+
+                <TextView
+                    android:id="@+id/main_nav_tv_login_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    tools:text="TakWolf"/>
+
+                <TextView
+                    android:id="@+id/main_nav_tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/text_color_light"
+                    android:textSize="14sp"
+                    tools:text="积分：0"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/main_nav_btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/main_nav_layout_info"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/button_transparent_image"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="@string/logout"
+                android:textColor="@color/text_color_light"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/main_nav_btn_theme_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/main_nav_layout_info"
+                android:layout_margin="16dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/button_transparent_image"
+                android:padding="16dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_brightness_3_white_24dp"/>
+
+        </RelativeLayout>
+
+        <View style="@style/AppWidget.ItemGap"/>
+
+        <CheckedTextView
+            android:id="@+id/main_nav_btn_all"
+            style="@style/AppWidget.NavigationItem"
+            android:checked="true"
+            android:drawableLeft="@drawable/main_nav_ic_all"
+            android:drawableStart="@drawable/main_nav_ic_all"
+            android:text="@string/tab_all"/>
+
+        <CheckedTextView
+            android:id="@+id/main_nav_btn_good"
+            style="@style/AppWidget.NavigationItem"
+            android:drawableLeft="@drawable/main_nav_ic_good"
+            android:drawableStart="@drawable/main_nav_ic_good"
+            android:text="@string/tab_good"/>
+
+        <CheckedTextView
+            android:id="@+id/main_nav_btn_share"
+            style="@style/AppWidget.NavigationItem"
+            android:drawableLeft="@drawable/main_nav_ic_share"
+            android:drawableStart="@drawable/main_nav_ic_share"
+            android:text="@string/tab_share"/>
+
+        <CheckedTextView
+            android:id="@+id/main_nav_btn_ask"
+            style="@style/AppWidget.NavigationItem"
+            android:drawableLeft="@drawable/main_nav_ic_ask"
+            android:drawableStart="@drawable/main_nav_ic_ask"
+            android:text="@string/tab_ask"/>
+
+        <CheckedTextView
+            android:id="@+id/main_nav_btn_job"
+            style="@style/AppWidget.NavigationItem"
+            android:drawableLeft="@drawable/main_nav_ic_job"
+            android:drawableStart="@drawable/main_nav_ic_job"
+            android:text="@string/tab_job"/>
+
+        <View style="@style/AppWidget.NavigationItemDeepLineGap"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/main_nav_btn_notification"
+                style="@style/AppWidget.NavigationItem"
+                android:drawableLeft="@drawable/ic_notifications_grey600_24dp"
+                android:drawableStart="@drawable/ic_notifications_grey600_24dp"
+                android:text="@string/notification"/>
+
+            <TextView
+                android:id="@+id/main_nav_tv_badger_notification"
+                style="@style/AppWidget.NavigationItemBadger"
+                tools:text="99+"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/main_nav_btn_setting"
+            style="@style/AppWidget.NavigationItem"
+            android:drawableLeft="@drawable/ic_settings_grey600_24dp"
+            android:drawableStart="@drawable/ic_settings_grey600_24dp"
+            android:text="@string/setting"/>
+
+        <TextView
+            android:id="@+id/main_nav_btn_about"
+            style="@style/AppWidget.NavigationItem"
+            android:drawableLeft="@drawable/ic_info_grey600_24dp"
+            android:drawableStart="@drawable/ic_info_grey600_24dp"
+            android:text="@string/about"/>
+
+        <View style="@style/AppWidget.ItemGap"/>
+
+    </LinearLayout>
+
+</com.cc.cnode.ui.widget.ScrimInsetsScrollView>
