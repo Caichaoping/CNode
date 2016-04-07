@@ -6,5 +6,6 @@ package com.cc.cnode.model.entity;
  * 邮箱：971859818@qq.com
  */
 public class User {
+    private String name;
 
 }
