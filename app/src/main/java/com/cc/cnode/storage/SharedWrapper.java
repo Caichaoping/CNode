@@ -3,7 +3,6 @@ package com.cc.cnode.storage;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.cc.cnode.util.codec.DES3;
 import com.cc.cnode.util.codec.Digest;
@@ -16,7 +15,7 @@ import java.lang.reflect.Type;
  * 作者：菠菜 on 2016/4/7 11:00
  * 邮箱：971859818@qq.com
  */
-public class SharedWrapper {
+public final class SharedWrapper {
 
     private final Context context;
     private final SharedPreferences sp;
@@ -44,15 +43,14 @@ public class SharedWrapper {
     // 以字符串方式取数据
     private String get(String key, String defValue) {
         try {
+
             String value = DES3.decrypt(getSecretKey(), sp.getString(getDigestKey(key), ""));
             if (TextUtils.isEmpty(value)) {
-                Log.d("SharedWrapper","解密为空取默认值");
                 return defValue;
             } else {
                 return value;
             }
         } catch (Exception e) {
-            Log.d("SharedWrapper","解密报错取默认值");
             return defValue;
 
         }

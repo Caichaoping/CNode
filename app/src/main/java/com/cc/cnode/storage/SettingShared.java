@@ -7,9 +7,11 @@ import android.content.Context;
  * 作者：菠菜 on 2016/4/7 14:26
  * 邮箱：971859818@qq.com
  */
-public class SettingShared {
+public final class SettingShared {
 
-    public SettingShared() {}
+
+
+    private SettingShared() {}
 
     private static final String TAG = "SettingShared";
 
@@ -65,5 +67,6 @@ public class SettingShared {
     public static void setTopicSignContent(Context context, String content) {
         SharedWrapper.with(context, TAG).setString(KEY_TOPIC_SIGN_CONTENT, content);
     }
+
 
 }

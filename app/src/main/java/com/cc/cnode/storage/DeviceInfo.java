@@ -30,7 +30,7 @@ public final  class DeviceInfo {
                 if (TextUtils.isEmpty(deviceToken)){
                     // UUID含义是通用唯一识别码，巨量数据不重复
                     deviceToken = Digest.MD5.getMessage(UUID.randomUUID().toString());
-                    context.getSharedPreferences(Digest.MD5.getMessage(TAG),Context.MODE_PRIVATE).edit().putString(KEY_DEVICE_TOKEN,deviceToken);
+                    context.getSharedPreferences(Digest.MD5.getMessage(TAG),Context.MODE_PRIVATE).edit().putString(KEY_DEVICE_TOKEN,deviceToken).apply();
 
                 }
             }

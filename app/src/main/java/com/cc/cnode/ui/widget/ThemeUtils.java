@@ -43,7 +43,6 @@ public class ThemeUtils {
 
     // Activity 启动前配置主题 返回是否为黑色主题
     public static boolean configThemeBeforeOnCreate(Activity activity, int light,int dark){
-
         boolean enable = SettingShared.isEnableThemeDark(activity);
         activity.setTheme(enable?dark:light);
         return  enable;

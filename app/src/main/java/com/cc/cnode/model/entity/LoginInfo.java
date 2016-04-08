@@ -4,16 +4,27 @@ import com.cc.cnode.util.FormatUtils;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * 注释：作者实体类
- * 作者：菠菜 on 2016/4/7 17:41
+ * 注释：登录信息
+ * 作者：菠菜 on 2016/4/8 10:51
  * 邮箱：971859818@qq.com
  */
-public class Author {
+public class LoginInfo {
+
+    private String id;
+
     @SerializedName("loginname")
     private String loginName;
 
     @SerializedName("avatar_url")
     private String avatarUrl;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getLoginName() {
         return loginName;
@@ -30,5 +41,4 @@ public class Author {
     public void setAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
     }
-
 }
